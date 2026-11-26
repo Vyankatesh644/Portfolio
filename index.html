@@ -285,7 +285,7 @@
           <div class="relative w-full max-w-[375px] rounded-2xl border border-white/15 bg-zinc-950 p-2.5 portrait-frame">
             <div class="relative aspect-[4/4.6] w-full overflow-hidden rounded-xl bg-gradient-to-b from-zinc-800 via-zinc-900 to-black">
               <!-- Active Portrait Photo (renders provided portrait on load or swaps to uploaded / profile.jpg) -->
-              <img id="custom-portrait-img" src="profile.jpg" alt="Vyankatesh G Kulkarni — DevOps & Cloud Engineer"
+              <img id="custom-portrait-img" src="./profile.webp" alt="Vyankatesh G Kulkarni — DevOps & Cloud Engineer"
                 class="h-full w-full object-cover object-top grayscale contrast-125 transition-all duration-300" />
 
               <!-- Crisp High-Contrast Fallback Portrait Canvas/SVG when no external image is present -->
@@ -1006,7 +1006,7 @@
       // if unavailable in preview/sandbox, fall back seamlessly to embedded portrait data URL.
       const probe = new Image();
       probe.onload = function () {
-        img.src = 'profile.jpg';
+        img.src = 'profile.webp';
         img.classList.remove('hidden');
         if (svg) svg.classList.add('hidden');
       };
@@ -1020,7 +1020,7 @@
           if (svg) svg.classList.remove('hidden');
         }
       };
-      probe.src = 'profile.jpg';
+      probe.src = 'profile.webp';
     }
 
     function togglePortraitTone() {
@@ -1062,7 +1062,7 @@
       const resetBtn = document.getElementById('reset-photo-btn');
       const input = document.getElementById('photo-upload');
       if (img) {
-        img.src = embeddedPortraitUrl || 'profile.jpg';
+        img.src = embeddedPortraitUrl || 'profile.webp';
         img.classList.remove('hidden');
       }
       if (svg) svg.classList.add('hidden');
